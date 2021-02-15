@@ -1,0 +1,1375 @@
+{
+  "id": "c6d2cce0-63e0-11eb-98e1-0d2756c00e5d",
+  "version": "1.0.0-beta.2",
+  "name": "pbr-ibl",
+  "nodes": [
+    {
+      "id": "6dbDpb-8VF",
+      "name": "Context",
+      "x": -338,
+      "y": 372,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "resolution",
+          "value": "2048 x 2048 - Instagram"
+        },
+        {
+          "name": "portrait",
+          "value": false
+        },
+        {
+          "name": "align",
+          "value": "center"
+        },
+        {
+          "name": "Auto clear",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "aipjxI7j70",
+      "name": "FPS Counter",
+      "x": -336,
+      "y": 412,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "6dbDpb-8VF",
+            "port": "out"
+          }
+        },
+        {
+          "name": "t",
+          "value": 0
+        },
+        {
+          "name": "enabled",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "zbEJVqsVlS",
+      "name": "Draw Geometry",
+      "x": -1274,
+      "y": 579,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "geom",
+          "value": null
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "0siYGwrQyi",
+            "port": "texture"
+          }
+        }
+      ]
+    },
+    {
+      "id": "0siYGwrQyi",
+      "name": "Texture",
+      "x": -1226,
+      "y": 476,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "value": "assets/plane-shadow.png"
+        },
+        {
+          "name": "flipY",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "yOkslKPPhZ",
+      "name": "Draw Geometry",
+      "x": -1141,
+      "y": 748,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "zbEJVqsVlS",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "geom",
+          "value": null
+        },
+        {
+          "name": "texture",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "gPFrmnFqcn",
+      "name": "Raw Camera",
+      "x": -337,
+      "y": 457,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "aipjxI7j70",
+            "port": "out"
+          }
+        },
+        {
+          "name": "background color",
+          "value": [
+            0.8274509803921568,
+            0.8745098039215686,
+            0.9137254901960784,
+            1
+          ]
+        },
+        {
+          "name": "near",
+          "value": 0.1
+        },
+        {
+          "name": "far",
+          "value": 105.36
+        }
+      ]
+    },
+    {
+      "id": "tOsSL91LNX",
+      "name": "Add Directional Light",
+      "x": -417,
+      "y": 755,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "JFGwlaQZ1f",
+            "port": "out2"
+          }
+        },
+        {
+          "name": "position",
+          "value": [
+            13.08,
+            10.84,
+            8.88
+          ]
+        },
+        {
+          "name": "color",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "intensity",
+          "value": 2.89
+        },
+        {
+          "name": "near",
+          "value": 0.55
+        },
+        {
+          "name": "far",
+          "value": 50
+        },
+        {
+          "name": "width",
+          "value": 10.56
+        },
+        {
+          "name": "bias",
+          "value": 0.08
+        }
+      ]
+    },
+    {
+      "id": "JFGwlaQZ1f",
+      "name": "Sequence",
+      "x": -337,
+      "y": 503,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "gPFrmnFqcn",
+            "port": "out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vgWO9jKd1j",
+      "name": "Draw View Space Normals ",
+      "x": -184,
+      "y": 758,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "ORKX7T6Kgv",
+            "port": "out1"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "ORKX7T6Kgv",
+      "name": "Switch",
+      "x": -126,
+      "y": 599,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "JFGwlaQZ1f",
+            "port": "out3"
+          }
+        },
+        {
+          "name": "switch",
+          "value": 2
+        },
+        {
+          "name": "comment",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "D4QWLEQoDz",
+      "name": "Draw  Normals ",
+      "x": -190,
+      "y": 722,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "ORKX7T6Kgv",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "Sf6m9KaThH",
+      "name": "Texture",
+      "x": -1088,
+      "y": 506,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "value": "assets/Test14.jpg"
+        },
+        {
+          "name": "flipY",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "yR-rH3OlZTL",
+      "name": "Load GLTF fucking complex lol",
+      "x": -1091,
+      "y": 300,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "value": "assets/ship_dark.gltf"
+        }
+      ]
+    },
+    {
+      "id": "NZ2L_SvMGpD",
+      "name": "Draw Directional Shadowmaps",
+      "x": -26,
+      "y": 695,
+      "templateName": "Custom",
+      "draft": "module.exports = (node, graph) => {\n  const triggerIn = node.triggerIn(\"in\");\n  const triggerOut = node.triggerOut(\"out\");\n  const enabledIn = node.in(\"enabled\", true, { connectable: false });\n\n  const { vec3 } = require(\"pex-math\");\n  const { ctx } = graph;\n\n  let uniforms;\n  let vertexNeedsUpdating = false;\n\n  function GetPipeline(aLightNum, dLightNum, pLightNum) {\n    let vertString = /*glsl*/ `\n      attribute vec3 aPosition;\n      attribute vec3 aNormal;\n      attribute vec3 aDiffuse;\n      attribute vec3 aSpecular;\n\n      varying vec3 vNormal;\n      varying vec3 fragPos;\n\n      uniform mat4 uProjectionMatrix;\n      uniform mat4 uViewMatrix;\n      uniform mat4 uModelMatrix;\n\n        void main () {        \n        vNormal = aNormal;\n        gl_Position =  uProjectionMatrix * uViewMatrix * uModelMatrix * vec4(aPosition, 1.0);\n      }\n      `;\n\n    let fragString = `\n        precision highp float;     \n        varying vec3 vNormal;\n        varying vec3 vPositionView;\n        varying vec3 fragPos;\n        void main(){\n           gl_FragColor = vec4(vec3(gl_FragCoord.z),1.0);\n        }\n        `;\n\n    return ctx.pipeline({\n      vert: vertString,\n      frag: fragString,\n      depthTest: true,\n      depthWrite: true,\n      cullFace: ctx.Face.Front,\n      blend: false,\n      blendSrcRGBFactor: ctx.BlendFactor.SrcColor,\n      blendSrcAlphaFactor: ctx.BlendFactor.One,\n      blendDstRGBFactor: ctx.BlendFactor.OneMinusSrcColor,\n      blendDstAlphaFactor: ctx.BlendFactor.One,\n    });\n  }\n\n  const drawCmd = {\n    pipeline: GetPipeline(),\n    attributes: {\n      aPosition: ctx.vertexBuffer([]),\n      aNormal: ctx.vertexBuffer([]),\n      aModelMatrix: ctx.vertexBuffer([]),\n    },\n    indices: ctx.indexBuffer([]),\n  };\n\n  triggerIn.onTrigger = (props) => {\n    const { camera, meshes, directionalLights } = props;\n\n    if (enabledIn.value && directionalLights) {\n      directionalLights.forEach((light)=>{\n        ctx.submit(drawCmd, {\n          pass: ctx.pass({\n            color: [light.colorTexture],\n            depth: light.depthTexture,\n            clearColor: [0, 0, 0, 1],\n            clearDepth: 1\n          }),\n        });\n      });\n\n\n      directionalLights.forEach((light) => { \n        uniforms = {\n          uProjectionMatrix: light.projectionMatrix,\n          uViewMatrix: light.viewMatrix,\n          uModelMatrix: [],\n        };\n\n        meshes.forEach((mesh) => {\n          uniforms.uModelMatrix = mesh.modelMatrix;\n\n          ctx.update(drawCmd.attributes.aPosition, {\n            data: mesh.geo.positions,\n          });\n          ctx.update(drawCmd.attributes.aNormal, { data: mesh.geo.normals });\n          ctx.update(drawCmd.indices, { data: mesh.geo.cells });\n\n          ctx.submit(drawCmd, {\n            uniforms,\n            pass: light.pass\n          });\n        });\n      });\n    }\n\n    triggerOut.trigger(props);\n  };\n};\n",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "ORKX7T6Kgv",
+            "port": "out2"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "RvKSnGOKoO0",
+      "name": "Add geo",
+      "x": -614,
+      "y": 803,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "k9qGQKnGJcD",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            3.76,
+            -6.46,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1.04,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0.5566550311200181,
+            0.5566550311200518,
+            0.5566550311200499,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0.02860633892633206,
+            0.02860633892633565,
+            0.028606338926335476,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "k9qGQKnGJcD",
+      "name": "Add geo",
+      "x": -614,
+      "y": 768,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "JFGwlaQZ1f",
+            "port": "out1"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            -0.24,
+            0,
+            -1.64
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            3.76,
+            -6.46,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1.04,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            0,
+            0.11372549019607843,
+            0.9803921568627451,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            1,
+            0.9803921568627451,
+            0.9803921568627451,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "uhqH7Jbgqex",
+      "name": "Add geo",
+      "x": -615,
+      "y": 842,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "RvKSnGOKoO0",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            0,
+            0,
+            1.64
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            3.76,
+            -6.46,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1.04,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            0.788235294117647,
+            0.0196078431372549,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0.9882352941176471,
+            0.9882352941176471,
+            0.9882352941176471,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "Ppovg1BaSki",
+      "name": "Add geo",
+      "x": -613,
+      "y": 883,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "uhqH7Jbgqex",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            1.9,
+            -1.26,
+            -0.1
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            12.3,
+            0.4,
+            10.04
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0.9607843137254902,
+            0.9607843137254902,
+            0.9607843137254902,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "uq8S1Xb7-Z9",
+      "name": "HDR Texture load",
+      "x": 119,
+      "y": 621,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "url",
+          "value": "assets/venice_sunset_2k.hdr"
+        }
+      ]
+    },
+    {
+      "id": "ik6pO3Ang",
+      "name": "Draw HDR to cube",
+      "x": -25,
+      "y": 802,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "NZ2L_SvMGpD",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "o-ETZ4z796",
+      "name": "Draw cubemap to screen",
+      "x": -26,
+      "y": 845,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "ik6pO3Ang",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "VAwb_nYvq",
+      "name": "Draw Irridiance to cube",
+      "x": -25,
+      "y": 891,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "o-ETZ4z796",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "IgVyCsEw2",
+      "name": "Draw cubemap to screen",
+      "x": -25,
+      "y": 936,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "VAwb_nYvq",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": false
+        },
+        {
+          "name": "texture",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "T44PW_GPU",
+      "name": "Draw quad to screen",
+      "x": 214,
+      "y": 1028,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jQgrB2Qvr",
+      "name": "Draw PFEM",
+      "x": -29,
+      "y": 1043,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "wzy1dcE7f",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wzy1dcE7f",
+      "name": "bdrf integration texture",
+      "x": -26,
+      "y": 990,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "IgVyCsEw2",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7iDXgCOhX",
+      "name": "Draw quad to screen",
+      "x": 213,
+      "y": 1062,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "enabled",
+          "value": true
+        },
+        {
+          "name": "texture",
+          "source": {
+            "id": "uq8S1Xb7-Z9",
+            "port": "texture out"
+          }
+        }
+      ]
+    },
+    {
+      "id": "3Ovf6EjVh",
+      "name": "Draw  PBR",
+      "x": -28,
+      "y": 1093,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "jQgrB2Qvr",
+            "port": "out"
+          }
+        },
+        {
+          "name": "enabled",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "DEkU3GgRd",
+      "name": "Add geo",
+      "x": -613,
+      "y": 923,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "Ppovg1BaSki",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            3.96,
+            2.22,
+            0
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "4Nz3WMaSs",
+      "name": "Add geo",
+      "x": -615,
+      "y": 972,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "DEkU3GgRd",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            3.96,
+            4.12,
+            0
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "C1doerRKw",
+      "name": "Add geo",
+      "x": -616,
+      "y": 1019,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "4Nz3WMaSs",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            3.96,
+            0.12,
+            0
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0.5411764705882353,
+            0.5411764705882353,
+            0.5411764705882353,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "FeQDfhHq0",
+      "name": "Add geo",
+      "x": -614,
+      "y": 1113,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "orv224G4_",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            -2.02,
+            2.52,
+            3.46
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0.8235294117647058,
+            0.41568627450980394,
+            0.41568627450980394,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            0.16862745098039217,
+            0.13333333333333333,
+            0.13333333333333333,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "orv224G4_",
+      "name": "Add geo",
+      "x": -616,
+      "y": 1068,
+      "templateName": "Custom",
+      "params": [
+        {
+          "name": "in",
+          "source": {
+            "id": "C1doerRKw",
+            "port": "out"
+          }
+        },
+        {
+          "name": "transform",
+          "value": [
+            1.86,
+            -0.66,
+            -4.24
+          ]
+        },
+        {
+          "name": "rotation",
+          "value": [
+            0.18,
+            9.54,
+            -11.98,
+            0.38
+          ]
+        },
+        {
+          "name": "scale",
+          "value": [
+            0.42,
+            2.44,
+            0.54
+          ]
+        },
+        {
+          "name": "albedo",
+          "value": [
+            1,
+            0.0196078431372549,
+            0.0196078431372549,
+            1
+          ]
+        },
+        {
+          "name": "metalic",
+          "value": [
+            0.03137254901960784,
+            0.03137254901960784,
+            0.03137254901960784,
+            1
+          ]
+        },
+        {
+          "name": "roughness",
+          "value": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "mesh",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "L2PwXgGmFyK",
+      "x": 150,
+      "y": -450,
+      "width": 300,
+      "height": 50,
+      "fontSize": 24,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Procedural landscape",
+      "collapseFlags": {}
+    },
+    {
+      "id": "qm3dZrBJxTd",
+      "x": 465,
+      "y": -450,
+      "width": 229,
+      "height": 79,
+      "fontSize": 14,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "This graph explains basics of working with Nodes.",
+      "collapseFlags": {}
+    },
+    {
+      "id": "ubuluGLSoRM",
+      "x": -179,
+      "y": 33,
+      "width": 180,
+      "height": 64,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "note:\nwe are using the depth buffer so we need to make sure to clear it at the start of each frame",
+      "collapseFlags": {}
+    },
+    {
+      "id": "AsJtoDFJTJ4",
+      "x": -447,
+      "y": 884,
+      "width": 113,
+      "height": 140,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "All of these 'add geo' nodes have the same basic internals but change up the primitive used from primitive geometry as well as positions & colors etc",
+      "collapseFlags": {}
+    },
+    {
+      "id": "yL2PIjsmc",
+      "x": -135,
+      "y": 538,
+      "width": 180,
+      "height": 90,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "Here we can switch our rendering type by diverting flow down a different pipeline",
+      "collapseFlags": {}
+    },
+    {
+      "id": "21uya8QzB",
+      "x": 206,
+      "y": 956,
+      "width": 250,
+      "height": 140,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "These are simple nodes that draw a specific pass to the screen, used for debugging during development",
+      "collapseFlags": {}
+    },
+    {
+      "id": "S1yNaVQlA",
+      "x": -152,
+      "y": 889,
+      "width": 113,
+      "height": 140,
+      "fontSize": 10,
+      "backgroundColor": [
+        0.1,
+        0.1,
+        0.1,
+        1
+      ],
+      "textColor": [
+        0.7,
+        0.7,
+        0.7,
+        1
+      ],
+      "text": "not all of these actually require  the hdri texture, but we can detect when this changes and use that as a simple way of telling when we need to reprocess all these texures",
+      "collapseFlags": {}
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "theme": "Default",
+  "currentGraph": "pbr-ibl",
+  "editorTheme": "Community Material Theme High Contrast",
+  "editorTabSize": 2,
+  "editorFontSize": 16,
+  "editorMinimap": true,
+  "editorWordWrap": "off",
+  "editorWordWrapColumn": 80,
+  "hideFullscreenGui": false,
+  "graphMetadata": {
+    "procedural-landscape": {
+      "offset": [
+        730.534535629011,
+        -756.6638336531581
+      ],
+      "zoomLevel": 0.90965792282843,
+      "sceneRatio": 0.66,
+      "canvasRatio": 0.5818096577590248,
+      "layout": "default"
+    },
+    "pbr": {
+      "offset": [
+        286,
+        -845
+      ],
+      "zoomLevel": 1,
+      "sceneRatio": 0.8610048457026269,
+      "canvasRatio": 0.5943491422805247,
+      "layout": "default"
+    },
+    "pbr-ibl": {
+      "offset": [
+        342.6220084226052,
+        -721.9494797002617
+      ],
+      "zoomLevel": 0.7337303141174555,
+      "sceneRatio": 0.44553676759732597,
+      "canvasRatio": 0.45663384903891235,
+      "layout": "vertical-no-helper"
+    }
+  }
+}
