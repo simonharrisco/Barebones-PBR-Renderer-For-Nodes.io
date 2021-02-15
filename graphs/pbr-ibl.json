@@ -53,75 +53,6 @@
       ]
     },
     {
-      "id": "zbEJVqsVlS",
-      "name": "Draw Geometry",
-      "x": -1274,
-      "y": 579,
-      "templateName": "Custom",
-      "params": [
-        {
-          "name": "enabled",
-          "value": true
-        },
-        {
-          "name": "geom",
-          "value": null
-        },
-        {
-          "name": "texture",
-          "source": {
-            "id": "0siYGwrQyi",
-            "port": "texture"
-          }
-        }
-      ]
-    },
-    {
-      "id": "0siYGwrQyi",
-      "name": "Texture",
-      "x": -1226,
-      "y": 476,
-      "templateName": "Custom",
-      "params": [
-        {
-          "name": "url",
-          "value": "assets/plane-shadow.png"
-        },
-        {
-          "name": "flipY",
-          "value": false
-        }
-      ]
-    },
-    {
-      "id": "yOkslKPPhZ",
-      "name": "Draw Geometry",
-      "x": -1141,
-      "y": 748,
-      "templateName": "Custom",
-      "params": [
-        {
-          "name": "in",
-          "source": {
-            "id": "zbEJVqsVlS",
-            "port": "out"
-          }
-        },
-        {
-          "name": "enabled",
-          "value": true
-        },
-        {
-          "name": "geom",
-          "value": null
-        },
-        {
-          "name": "texture",
-          "value": null
-        }
-      ]
-    },
-    {
       "id": "gPFrmnFqcn",
       "name": "Raw Camera",
       "x": -337,
@@ -284,36 +215,6 @@
         {
           "name": "enabled",
           "value": true
-        }
-      ]
-    },
-    {
-      "id": "Sf6m9KaThH",
-      "name": "Texture",
-      "x": -1088,
-      "y": 506,
-      "templateName": "Custom",
-      "params": [
-        {
-          "name": "url",
-          "value": "assets/Test14.jpg"
-        },
-        {
-          "name": "flipY",
-          "value": true
-        }
-      ]
-    },
-    {
-      "id": "yR-rH3OlZTL",
-      "name": "Load GLTF fucking complex lol",
-      "x": -1091,
-      "y": 300,
-      "templateName": "Custom",
-      "params": [
-        {
-          "name": "url",
-          "value": "assets/ship_dark.gltf"
         }
       ]
     },
@@ -1217,72 +1118,6 @@
     }
   ],
   "comments": [
-    {
-      "id": "L2PwXgGmFyK",
-      "x": 150,
-      "y": -450,
-      "width": 300,
-      "height": 50,
-      "fontSize": 24,
-      "backgroundColor": [
-        0.1,
-        0.1,
-        0.1,
-        1
-      ],
-      "textColor": [
-        0.7,
-        0.7,
-        0.7,
-        1
-      ],
-      "text": "Procedural landscape",
-      "collapseFlags": {}
-    },
-    {
-      "id": "qm3dZrBJxTd",
-      "x": 465,
-      "y": -450,
-      "width": 229,
-      "height": 79,
-      "fontSize": 14,
-      "backgroundColor": [
-        0.1,
-        0.1,
-        0.1,
-        1
-      ],
-      "textColor": [
-        0.7,
-        0.7,
-        0.7,
-        1
-      ],
-      "text": "This graph explains basics of working with Nodes.",
-      "collapseFlags": {}
-    },
-    {
-      "id": "ubuluGLSoRM",
-      "x": -179,
-      "y": 33,
-      "width": 180,
-      "height": 64,
-      "fontSize": 10,
-      "backgroundColor": [
-        0.1,
-        0.1,
-        0.1,
-        1
-      ],
-      "textColor": [
-        0.7,
-        0.7,
-        0.7,
-        1
-      ],
-      "text": "note:\nwe are using the depth buffer so we need to make sure to clear it at the start of each frame",
-      "collapseFlags": {}
-    },
     {
       "id": "AsJtoDFJTJ4",
       "x": -447,
